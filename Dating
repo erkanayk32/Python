@@ -1,0 +1,18 @@
+import random
+
+Words = ["Hi!", "My name is Yusuf Esad AYKAN", "Im 9 years old", "Im Game Developer"]
+print(Words[0])
+Next_Words = 1
+def Code():
+    Input_1 = input()
+    global Next_Words
+    if Input_1 == "Next":
+        print(Words[Next_Words])
+        Next_Words += 1
+        if Next_Words > 3:
+            Next_Words = 0
+        return(Code())
+    elif Input_1 == "Data_Random":
+        print(random.choice(Words))
+        return(Code())
+Code()
